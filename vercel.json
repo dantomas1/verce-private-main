@@ -1,0 +1,21 @@
+{
+
+  "functions": {
+
+    "/api/*.php": {
+
+      "runtime": "vercel-php@0.6.0"
+
+    }
+
+  },
+  "routes": [
+    { "src": "/(.*)",  "dest": "/api/index.html" },
+    { "src": "/backup.html", "dest": "/api/backup.html" },
+    { "src": "/index.php", "dest": "/api/index.php" },
+    { "src": "/css/style.css", "dest": "/css/style.css" },
+    { "src": "/css/backup.css", "dest": "/css/backup.css" },
+    { "src": "/media/metamask logo.png", "dest": "/media/metamask logo.png" }
+  ]
+
+}
