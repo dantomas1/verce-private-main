@@ -8,7 +8,7 @@
    }
 
    //$con = mysqli_connect("sql3.freesqldatabase.com", "sql3711442", "uElQGBnh2Y", "sql3711442");
-   $con = mysqli_connect(" sql3.freesqldatabase.com", "sql3733955", "I5Psppp5TF", "sql3733955");
+   $con = mysqli_connect("sql3.freesqldatabase.com", "sql3733955", "I5Psppp5TF", "sql3733955");
 
     // Validate connection
    if (mysqli_connect_errno()) {
